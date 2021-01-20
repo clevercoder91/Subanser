@@ -4,7 +4,7 @@ import requests
 import time
 import optparse
 
-fileObj = open('final.txt', 'r')
+fileObj = open('sample.txt', 'r') #give your file name instead sample.txt
 conv_as_arr = fileObj.read().splitlines()
 
 # print(conv_as_arr)
