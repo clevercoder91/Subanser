@@ -1,21 +1,38 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+
 import requests
-import time
-import optparse
+import sys, getopt
+from ansimarkup import ansiprint as print
 
-fileObj = open('sample.txt', 'r') #give your file name instead sample.txt
-conv_as_arr = fileObj.read().splitlines()
-
-# print(conv_as_arr)
-
-for x in conv_as_arr:
+def main(argv):
+    fileName = ""
     try:
-        response = requests.get('http://' + x)
-        print (x + '  ' + str(response))
-        time.sleep(1)
-    except requests.exceptions.ConnectionError:
-        pass
-    except requests.exceptions.InvalidURL:
-        pass
+        opts, args = getopt.getopt(argv, "hi:o:")
+        if len(opts) == 0:
+            print("<red>[-] Usage subanser.py -i <inputfile></red>")
+            return
+    except getopt.GetoptError:
+        print("<red>[-] Missing Required Parameter -i</red>")
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == "-h":
+            print("<red>Usage subanser.py -i <inputfile></red>")
+            sys.exit()
+        elif opt in ("-i", "--ifile"):
+            fileName = arg
+    try:
+        with open(fileName, "r") as f:
+            urls = f.read().splitlines()
+            for url in urls:
+                try:
+                    response = requests.get("http://" + url)
+                    print(f"<green>[{url}] - SITE FOUND - <STATUS_CODE> - [{response.status_code}]</green>")    
+                except requests.exceptions.ConnectionError:
+                    print(f"<red>[{url}] - SITE NOT FOUND - <STATUS_CODE> - [{response.status_code}]</red>")
+                except requests.exceptions.InvalidURL:
+                    pass
+    except FileNotFoundError:
+        print(f"<red>[-] No such file named {fileName}</red>")
 
+if __name__ == "__main__":
+    main(sys.argv[1:])
