@@ -16,8 +16,8 @@ I have created a simple python script which will help you in checking if the sub
 
 
 # Social media where you can contact me :-
-- instagram:-learn.linux_91,mr.hacker_1491
-- linkedin:- Samarth Dwivedi
-- twitter:- @WhiteDe33021680
+- Instagram:-[learn.linux_91](http://instagram.com/learn.linux_91),[mr.hacker_1491](http://instagram.com/mr.hacker_1491)
+- LinkedIn:- Samarth Dwivedi
+- Twitter:- @[WhiteDe33021680](http://twitter.com/WhiteDe33021680)
 
 > Thank You. Wish you happy Hacking :)
