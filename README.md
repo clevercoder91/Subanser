@@ -18,6 +18,6 @@ I have created a simple python script which will help you in checking if the sub
 # Social media where you can contact me :-
 - instagram:-learn.linux_91,mr.hacker_1491
 - linkedin:- Samarth Dwivedi
-- twitter:- @WhiteDe33021680
+- twitter:- somemorecheeze
 
 > Thank You. Wish you happy Hacking :)
