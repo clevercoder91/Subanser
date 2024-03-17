@@ -19,7 +19,7 @@ SubAnser is a Go program designed to check the availability of web services acro
 
 ## Note
 This tool is written for my learning purpose as previous script was created with the help of friend. I have tried recreating it in my fav lang GO. It might have errors or might give false positie if you  feel their is some wrong
-wil recommnded it checking manually. 
+wil recommnded it checking manually. You can change the protocols by editting manually  as one can also change the inerval set in the reqHandler function which is currently set to 30 sec. 
 
 ## Installation
 
